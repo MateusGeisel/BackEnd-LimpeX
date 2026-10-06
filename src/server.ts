@@ -5,6 +5,7 @@ import { pool } from './config/database';
 import authRoutes from './routes/authRoutes';
 import addressRouter from './routes/addressRoutes';
 import prestadorRouter from './routes/prestadorRoutes';
+import solicitacaoRouter from './routes/solicitacaoRoutes';
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(express.json());
 app.use('/auth', authRoutes);
 app.use('/address', addressRouter);
 app.use('/prestador', prestadorRouter);
+app.use('/solicitacoes', solicitacaoRouter);
 
 // Rota de Teste (Healthcheck)
 app.get('/health', async (req, res) => {
